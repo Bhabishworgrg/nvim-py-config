@@ -26,7 +26,7 @@ end
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { 'bashls', 'docker_compose_language_service', 'dockerls', 'pyright', 'lua_ls' },	-- servers for autocompletion
+	ensure_installed = { 'bashls', 'docker_compose_language_service', 'dockerls', 'pyright', 'lua_ls', 'terraformls' },	-- servers for autocompletion
 	handlers = { default_setup }
 })
 
