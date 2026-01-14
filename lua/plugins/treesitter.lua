@@ -7,7 +7,7 @@ return {{
 		local configs = require('nvim-treesitter.configs')
 
 		configs.setup({
-			ensure_installed = { 'bash', 'lua', 'python', 'terraform', 'dockerfile', 'json', 'yaml', 'markdown', 'markdown_inline' },
+			ensure_installed = { 'bash', 'lua', 'python', 'dockerfile', 'json', 'yaml', 'markdown', 'markdown_inline', 'javascript', 'typescript', 'html', 'css' },
 			sync_install = false,
 			highlight = { enable = true },
 			indent = { enable = true },

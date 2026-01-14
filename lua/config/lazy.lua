@@ -26,7 +26,7 @@ end
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = { 'bashls', 'docker_compose_language_service', 'dockerls', 'pyright', 'lua_ls', 'terraformls' },	-- servers for autocompletion
+	ensure_installed = { 'bashls', 'docker_compose_language_service', 'dockerls', 'pyright', 'lua_ls', 'denols', 'cssls', 'html' },	-- servers for autocompletion
 	handlers = { default_setup }
 })
 
@@ -71,3 +71,4 @@ telescope.setup({
 })
 
 telescope.load_extension('ui-select')
+telescope.load_extension('git_file_history')
