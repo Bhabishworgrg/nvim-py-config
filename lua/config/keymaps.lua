@@ -10,6 +10,9 @@ set('n', '<leader><leader>', builtin.find_files)	-- search files
 set('n', '<leader>f', builtin.live_grep)			-- search inside of files
 set('n', '<leader>c', vim.lsp.buf.code_action)		-- show code actions
 set('n', '<leader>d', vim.diagnostic.open_float)	-- show error/warning message
+set('n', '<leader>h',
+	require('telescope').extensions.git_file_history.git_file_history
+) -- show git file history
 
 -- Fugitive
 set('n', '<leader>g', cmd.Git)						-- show git status
