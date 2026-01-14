@@ -55,12 +55,28 @@ devicons.setup {
 
 -- Setup telescope layout and lsp code actions
 local telescope = require('telescope')
+local actions = require('telescope.actions')
 
 telescope.setup({
 	defaults = {
-		layout_strategy = 'vertical',
+		layout_strategy = 'flex',
 		layout_config = {
-			preview_cutoff = 0,
+			horizontal = { preview_width = 0.6, width = 0.9, height = 0.9 },
+			vertical = { preview_height = 0.7, width = 0.9, height = 0.9 },
+		},
+		mappings = {
+			i = {
+				['<C-h>'] = actions.preview_scrolling_left,		-- scroll left preview window
+				['<C-l>'] = actions.preview_scrolling_right,	-- scroll right preview window
+				['<C-j>'] = actions.preview_scrolling_down,		-- scroll down preview window
+				['<C-k>'] = actions.preview_scrolling_up,		-- scroll up preview window
+			},
+			n = {
+				['<C-h>'] = actions.preview_scrolling_left,		-- scroll left preview window
+				['<C-l>'] = actions.preview_scrolling_right,	-- scroll right preview window
+				['<C-j>'] = actions.preview_scrolling_down,		-- scroll down preview window
+				['<C-k>'] = actions.preview_scrolling_up,		-- scroll up preview window
+			},
 		},
 	},
 	extensions = {
